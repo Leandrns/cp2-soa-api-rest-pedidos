@@ -48,7 +48,7 @@ public class PedidoService {
     public void deletarPorId(Long id) {
         try {
             pedidoRepository.deleteById(id);
-        }catch (EmptyResultDataAccessException e){
+        } catch (EmptyResultDataAccessException e){
             throw new EntityNotFoundException("Pedido não encontrado!");
         }
     }
