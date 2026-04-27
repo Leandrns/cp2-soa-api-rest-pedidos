@@ -1,13 +1,9 @@
 package br.com.fiap3esa.checkpoint2.model;
 
-import jakarta.persistence.Entity;
+import jakarta.persistence.*;
 
 import java.math.BigDecimal;
 import java.time.LocalDate;
-import jakarta.persistence.Id;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.PrePersist;
 
 import jakarta.validation.constraints.NotEmpty;
 import jakarta.validation.constraints.DecimalMin;
@@ -23,7 +19,7 @@ import lombok.AllArgsConstructor;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-
+@Table(name = "Pedidos")
 public class Pedido {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
