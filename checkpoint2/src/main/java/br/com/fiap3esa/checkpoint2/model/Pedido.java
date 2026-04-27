@@ -32,7 +32,7 @@ public class Pedido {
     @NotEmpty(message = "O nome do cliente é obrigatório.")
     private String clienteNome;
 
-    private LocalDate dataPedido;
+    private LocalDate dataPedido = LocalDate.now();
 
     @DecimalMin(value = "0.0", message = "O valor total não pode ser negativo.")
     @Positive
